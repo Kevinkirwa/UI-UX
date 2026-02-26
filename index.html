@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Styles | Creative Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Alex Styles</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Building Digital Experiences</h1>
+            <p>UI/UX Designer & Front-End Developer</p>
+            <button id="modalBtn" class="btn">View My Work</button>
+        </div>
+    </header>
+
+    <section id="about" class="container">
+        <h2 class="section-title">About Me</h2>
+        <p>I create accessible, pixel-perfect user interfaces that blend art with functionality.</p>
+    </section>
+
+    <section id="portfolio" class="container">
+        <h2 class="section-title">My Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-dumbbell"></i></div>
+                <h3>Fitness App</h3>
+                <p>A mobile-first tracking dashboard.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-shopping-cart"></i></div>
+                <h3>E-Commerce</h3>
+                <p>Responsive shopping platform.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-hospital"></i></div>
+                <h3>Hospital System</h3>
+                <p>Management dashboard for medical professionals.</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Project Details</h2>
+            <p>This portfolio demonstrates responsive design, CSS Grid layouts, and interactive JavaScript elements created with AI assistance.</p>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <p>&copy; 2026 Alex Styles. Designed with AI Collaboration.</p>
+    </footer>
+
+    <script>
+        // Get modal elements
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("modalBtn");
+        var span = document.getElementsByClassName("close")[0];
+
+        // Open modal
+        btn.onclick = function() { modal.style.display = "block"; }
+
+        // Close modal
+        span.onclick = function() { modal.style.display = "none"; }
+
+        // Close if clicking outside
+        window.onclick = function(event) {
+            if (event.target == modal) { modal.style.display = "none"; }
+        }
+    </script>
+</body>
+</html>
